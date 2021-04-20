@@ -1,9 +1,5 @@
-# ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.1.4
-# FROM ${BUILD_FROM}
-ARG BUILD_FROM=hassioaddons/debian-base:4.2.0
-# hadolint ignore=DL3006
-FROM ${BUILD_FROM} as base
-ARG BUILD_ARCH
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.2.0
+FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -15,7 +11,10 @@ ENV ROON_DATAROOT /data
 ENV ROON_ID_DIR /data
 
 # Install requirements for add-on
-RUN apt-get update && apt-get -y upgrade && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils
+RUN apt-get update \
+        && apt-get -y upgrade \
+        && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils
+
 
 # Copy data for add-on
 COPY run.sh /
@@ -31,12 +30,14 @@ LABEL \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
     maintainer="Matthijs" \
-    org.label-schema.description="Roon Server" \
-    org.label-schema.build-date=${BUILD_DATE} \
-    org.label-schema.name="Roon Serverr" \
-    org.label-schema.schema-version="1.8" \
-    org.label-schema.url="" \
-    org.label-schema.usage="" \
-    org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/matthijsberg/HomeAssistant-Addons" \
-    org.label-schema.vendor="Matthijs HASSIO addons"
+    org.opencontainers.image.title="${BUILD_NAME}" \
+    org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
+    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
+    org.opencontainers.image.authors="Matthijs" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://addons.community" \
+    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
+    org.opencontainers.image.created=${BUILD_DATE} \
+    org.opencontainers.image.revision=${BUILD_REF} \
+    org.opencontainers.image.version=${BUILD_VERSION}
