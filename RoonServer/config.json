@@ -1,0 +1,14 @@
+{
+  "name": "Roon Server",
+  "version": "202104.1",
+  "slug": "roon_server",
+  "description": "Roon Server to run in your HA config. Requires a Roon subscription! Configure via APP",
+  "arch": ["amd64"],
+  "url": "https://help.roonlabs.com/portal/en/kb/articles/linux-install",
+  "startup": "application",
+  "boot": "auto",
+  "map": ["backup:rw", "media:rw" ],
+  "options": {},
+  "schema": {},
+  "host_network": true
+}
