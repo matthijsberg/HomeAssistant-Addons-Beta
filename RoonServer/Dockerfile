@@ -11,9 +11,7 @@ ENV ROON_DATAROOT /data
 ENV ROON_ID_DIR /data
 
 # Install requirements for add-on
-RUN apt-get update \
-        && apt-get -y upgrade \
-        && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils
+RUN apt-get update && apt-get -y upgrade && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils
 
 # Copy data for add-on
 COPY run.sh /
@@ -29,3 +27,12 @@ LABEL \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
     maintainer="Matthijs" \
+    org.label-schema.description="Roon Server" \
+    org.label-schema.build-date=${BUILD_DATE} \
+    org.label-schema.name="Roon Serverr" \
+    org.label-schema.schema-version="1.8" \
+    org.label-schema.url="" \
+    org.label-schema.usage="" \
+    org.label-schema.vcs-ref=${BUILD_REF} \
+    org.label-schema.vcs-url="https://github.com/matthijsberg/HomeAssistant-Addons" \
+    org.label-schema.vendor="Matthijs HASSIO addons"
