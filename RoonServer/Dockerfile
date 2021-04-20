@@ -1,5 +1,9 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.1.4
-FROM ${BUILD_FROM}
+# ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:4.1.4
+# FROM ${BUILD_FROM}
+ARG BUILD_FROM=hassioaddons/debian-base:4.2.0
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM} as base
+ARG BUILD_ARCH
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
