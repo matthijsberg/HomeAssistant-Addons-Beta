@@ -10,6 +10,9 @@ ENV ROON_SERVER_URL http://download.roonlabs.com/builds/${ROON_SERVER_PKG}
 ENV ROON_DATAROOT /data
 ENV ROON_ID_DIR /data
 
+# According to instruction from Roon and for future non root process?
+RUN addgroup root audio
+
 # Install requirements for add-on
 RUN apt-get update \
         && apt-get -y upgrade \
