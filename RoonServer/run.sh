@@ -13,6 +13,7 @@ if test ! -d RoonServer; then
         rm -f $ROON_SERVER_PKG
 fi
 echo "Roonserver Installed"
+cd /data/RoonServer/Database/Registry/Core
 if test ! -f backups; then
         echo "Back-up schedule not found, downloading default for this HA install"
         wget https://github.com/matthijsberg/HomeAssistant-Addons/blob/main/RoonServer/config/backups
@@ -26,4 +27,5 @@ else
         echo "Default back-up path config file found, not toutching. DO CHECK FILE PATH! Should point to /backup. That folder is mapped to HA backup folder."
 fi
 echo "Installation an basic configuration finished! Starting service."
+cd /app/RoonServer/
 /app/RoonServer/start.sh
