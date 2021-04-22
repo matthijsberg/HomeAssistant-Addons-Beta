@@ -1,0 +1,19 @@
+{
+    "destinations": [
+        {
+            "version": 2,
+            "location": {
+                "drive": {
+                    "type": "Attached",
+                    "volume": {
+                        "id": "LINUXROOT",
+                        "title": "/",
+                        "subtitle": null
+                    }
+                },
+                "isdir": true,
+                "path": "/backup/roon"
+            }
+        }
+    ]
+}
