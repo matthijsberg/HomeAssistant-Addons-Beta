@@ -10,11 +10,21 @@ ENV ROON_SERVER_URL http://download.roonlabs.com/builds/${ROON_SERVER_PKG}
 ENV ROON_DATAROOT /data
 ENV ROON_ID_DIR /data
 
-# Install requirements for add-on
-RUN apt-get update \
-        && apt-get -y upgrade \
-        && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils
+# Packages to install 
+ENV BUILD_DEPS bash            \
+               alsa-utils      \
+               curl            \
+               bash            \
+               bzip2           \
+               ffmpeg          \
+               cifs-utils      \ 
 
+# Install requirements for add-on
+RUN apt-get update && apt-get install -y --no-install-recommends ${BUILD_DEPS}
+
+ARG BUILD_DATE
+ARG BUILD_REF
+ARG BUILD_VERSION
 
 # Copy data for add-on
 COPY run.sh /
