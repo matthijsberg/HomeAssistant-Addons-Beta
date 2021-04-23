@@ -5,12 +5,12 @@ All notable changes to this project will be documented in this file.
  - App Armor? 
  - Web Gui based on https://github.com/pluggemi/roon-web-controller/tree/alpha ?
 
-## [202104.06] 23 april 2021
+## [202104.6] 23 april 2021
 ### Added
  - DOC file
  - CHANGELOG file (this one)
 
-## [202104.05] 22 april 2021
+## [202104.5] 22 april 2021
 ### Added basically everything
  - First version based on https://github.com/steefdebruijn/docker-roonserver/
  - Changed some things to map /media and /backup
