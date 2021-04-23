@@ -10,5 +10,6 @@
   "map": ["backup:rw", "media:rw" ],
   "options": {},
   "schema": {},
-  "host_network": true
+  "host_network": true,
+  "realtime": true
 }
