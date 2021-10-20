@@ -13,6 +13,7 @@ if test ! -d RoonServer; then
         rm -f $ROON_SERVER_PKG
 fi
 echo "Roonserver Installed"
+pause
 cd /data/RoonServer/Database/Registry/Core
 if test ! -f backups; then
         echo "Back-up schedule not found, downloading default for this HA install"
