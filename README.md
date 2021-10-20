@@ -1,7 +1,7 @@
-# HomeAssistant-Addons
-My take at building some HA addons that I miss. 
+# HomeAssistant-Addons BETA
+My take at building some HA addons that I miss. BETA FOR DEV EN TEST
 
-Add this URL into HA as a custom repository: https://github.com/matthijsberg/HomeAssistant-Addons/
+Add this URL into HA as a custom repository: https://github.com/matthijsberg/HomeAssistant-Addons-Beta/
 
 ## Roon Server
 Based on the work of Steef; https://github.com/steefdebruijn/docker-roonserver
