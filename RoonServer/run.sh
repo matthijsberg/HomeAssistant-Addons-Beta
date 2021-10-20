@@ -28,4 +28,5 @@ else
 fi
 echo "Installation an basic configuration finished! Starting service."
 cd /app/RoonServer/
+pause
 /app/RoonServer/start.sh
