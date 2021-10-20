@@ -16,7 +16,7 @@ RUN addgroup root audio
 # Install requirements for add-on
 RUN apt-get update \
         && apt-get -y upgrade \
-        && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils wget libc6 libgcc1 libgssapi-krb5-2 libicu67 libssl1.1 libstdc++6 zlib1g 
+        && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils wget 
         
 ARG BUILD_DATE
 ARG BUILD_REF
