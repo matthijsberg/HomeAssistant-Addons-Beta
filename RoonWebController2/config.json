@@ -1,0 +1,16 @@
+{
+  "name": "Roon Web Controler ALPHA",
+  "version": "202110.1",
+  "slug": "roon_webcontroller_alpha",
+  "description": "ALPHA TEST AND DEV VERSION: Roon Web Controller to run in your HA config. Requires a Roon Server and a Roon subscription!",
+  "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"],
+  "url": "https://github.com/pluggemi/roon-web-controller/tree/alpha",
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "8080/tcp": 8080
+  },
+  "options": {},
+  "schema": {},
+  "realtime": true
+}
