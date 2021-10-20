@@ -6,11 +6,9 @@ ENV LANG C.UTF-8
 ## Install node
 RUN apk add --no-cache jq nodejs nodejs-npm git
 
-sleep 4h
-
 ## Get the provider
 RUN git clone https://github.com/pluggemi/roon-web-controller \
-  && git checkout alpha \
+	&& git checkout alpha \
 	&& cd /roon-web-controller \
 	&& npm install \
 	&& npm update \
