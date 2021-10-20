@@ -1,10 +1,19 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.1.1
+FROM ${BUILD_FROM}
+
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 ENV LANG C.UTF-8
 
-## Install node
-RUN apk add --no-cache jq nodejs nodejs-npm git
+# Install requirements for add-on
+RUN apt-get update \
+        && apt-get -y upgrade \
+        && apt-get -y install bash jq nodejs nodejs-npm git
+        
+ARG BUILD_DATE
+ARG BUILD_REF
+ARG BUILD_VERSION
 
 ## Get the provider
 RUN git clone https://github.com/pluggemi/roon-web-controller \
