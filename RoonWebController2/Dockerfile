@@ -15,14 +15,6 @@ ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
 
-## Get the provider
-RUN git clone https://github.com/pluggemi/roon-web-controller \
-	&& git checkout alpha \
-	&& cd /roon-web-controller \
-	&& npm install \
-	&& npm update \
-	&& cd ..
-
 COPY run.sh /
 RUN chmod a+x /run.sh
 
