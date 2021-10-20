@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Roon Server
+# Home Assistant Add-on: Roon Server BETA
 
 The Roon Server add-on allows you to run a Roon Server as an add-on in Home Assistant. Roon Server is a part of a Roon audio setup and acts as a central hub in your setup, also known as a Roon Core. 
 
