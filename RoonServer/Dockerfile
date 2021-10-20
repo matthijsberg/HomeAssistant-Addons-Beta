@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:3.2.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.1.1
 FROM ${BUILD_FROM}
 
 # Set shell
@@ -16,8 +16,8 @@ RUN addgroup root audio
 # Install requirements for add-on
 RUN apt-get update \
         && apt-get -y upgrade \
-        && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils wget
-
+        && apt-get -y install bash curl bzip2 ffmpeg cifs-utils alsa-utils wget libc6 libgcc1 libgssapi-krb5-2 libicu67 libssl1.1 libstdc++6 zlib1g 
+        
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
