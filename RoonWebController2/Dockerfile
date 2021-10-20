@@ -9,7 +9,7 @@ ENV LANG C.UTF-8
 # Install requirements for add-on
 RUN apt-get update \
         && apt-get -y upgrade \
-        && apt-get -y install bash jq nodejs nodejs-npm git
+        && apt-get -y install bash
         
 ARG BUILD_DATE
 ARG BUILD_REF
