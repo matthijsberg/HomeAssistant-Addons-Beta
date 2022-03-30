@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
  - App Armor? 
  - Web Gui based on https://github.com/pluggemi/roon-web-controller/tree/alpha ?
 
+## [202203.2] 30 March 2022
+### changed
+ - download url was changed to .net
+ - changed curl to wget (honors 301)
+
 ## [202110.1] 20 oktober 2021
 ### Added
  - Created BETA vrsion
