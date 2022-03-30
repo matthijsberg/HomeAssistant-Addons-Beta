@@ -1,6 +1,6 @@
 {
   "name": "Roon Server BETA",
-  "version": "202110.1",
+  "version": "202203.1",
   "slug": "roon_server",
   "description": "BETA TEST AND DEV VERSION: Roon Server to run in your HA config. Requires a Roon subscription! Configure via APP",
   "arch": ["amd64"],
